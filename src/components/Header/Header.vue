@@ -1,16 +1,16 @@
 <template>
     <header class="header">
         <div class="headerContainer">
-            <Menu />
+            <Tags />
         </div>
     </header>
 </template>
 <script>
-import Menu from './Menu';
+import Tags from './Tags';
 
 export default {
     components: {
-        Menu
+        Tags,
     }
 }
 </script>

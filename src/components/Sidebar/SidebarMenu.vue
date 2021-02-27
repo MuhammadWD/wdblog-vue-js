@@ -12,11 +12,11 @@ export default {
     data(){
         return{
             menuItems: [
-                { title: 'Home', isActive: true },
+                { title: 'Home', isActive: false },
                 { title: 'Categories', isActive: false },
                 { title: 'Articles', isActive: false },
                 { title: 'My works', isActive: false },
-                { title: 'About me', isActive: false }
+                { title: 'About me', isActive: true }
             ]
         }
     }
@@ -36,11 +36,11 @@ export default {
             padding-bottom: 0;
             transition: all .3s ease-in-out;
             &:hover{
-                color: #2a31e1;
+                color: $primary;
                 padding-bottom: 10px;
-                border-bottom: 2px solid #2a31e1;
+                border-bottom: 2px solid $primary;
             }
         }
     }
-    .active{ color: #2a31e1; }
+    .active{ color: $primary; }
 </style>
