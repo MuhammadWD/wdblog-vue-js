@@ -15,6 +15,8 @@ export default {
 <style lang="scss" scoped>
     .mainWrapper{
         width: 100%;
+        margin-left: $sidebarSize;
         height: 100%;
+        border: 1px solid #000;
     }
 </style>

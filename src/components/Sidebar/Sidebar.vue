@@ -18,7 +18,11 @@ export default {
 }
 </script>
 <style lang="scss">
-    
+    .sidebar{
+        width: $sidebarSize;
+        height: 100vh;
+        position: fixed;
+    }
     .sidebarContainer{
         width: 100%;
         height: 100%;
