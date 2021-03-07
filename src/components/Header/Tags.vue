@@ -3,7 +3,7 @@
         <li class="tagItem"
         v-for="item in tagsItems"
         :key="item">
-            <a href="" class="tagLink" :class="{ active: item.isActive }">{{item.title}}</a>
+            <a href="" class="tagLink" exact active-class="active">{{item.title}}</a>
         </li>
     </ul>
 </template>
@@ -12,11 +12,11 @@ export default {
     data(){
         return{
             tagsItems: [
-                { title: '#frontend', isActive: true },
-                { title: '#backend', isActive: false },
-                { title: '#frameworks', isActive: false },
-                { title: '#Laravel', isActive: false },
-                { title: '#mobDevs', isActive: false }
+                { title: '#frontend' },
+                { title: '#backend' },
+                { title: '#frameworks' },
+                { title: '#Laravel' },
+                { title: '#mobDevs' }
             ]
         }
     }
@@ -30,13 +30,12 @@ export default {
         align-items: center;
         justify-content: flex-start;
         padding: 10px 20px;
-        border: 1px solid #000;
-        .tagItem{ margin: 15px 10px; border: 1px solid #fff;}
+        .tagItem{ margin: 15px 10px;}
         .tagLink{
             font-family: 'Numans', sans-serif;
             font-size: 1.3rem;
-            transition: all .3s ease-in-out;
-            &:hover{ color: $primary; }
+            opacity: 0.4;
+            &:hover{ color: $primary; opacity: 1; }
         }
     }
     .active{ color: $primary; }

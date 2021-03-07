@@ -3,7 +3,8 @@
         <li class="menuItem"
         v-for="item in menuItems"
         :key="item">
-            <a href="#" class="menuLink" :class="{active: item.isActive}"> {{item.title}} </a>
+            <router-link :to="item.link"
+                class="menuLink" exact active-class="active"> {{item.title}} </router-link>
         </li>
     </ul>
 </template>
@@ -12,11 +13,11 @@ export default {
     data(){
         return{
             menuItems: [
-                { title: 'Home', isActive: false },
-                { title: 'Categories', isActive: false },
-                { title: 'Articles', isActive: false },
-                { title: 'My works', isActive: false },
-                { title: 'About me', isActive: true }
+                { title: 'Home', link: "/" },
+                { title: 'Articles', link: "/articles" },
+                { title: 'Categories', link: "/category" },
+                { title: 'My works', link: "/works" },
+                { title: 'About me', link: "/about" }
             ]
         }
     }
@@ -28,19 +29,21 @@ export default {
         height: auto;
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
-        .menuItem{ padding: 15px; }
+        .menuItem{ padding: 10px 15px; }
         .menuLink{
             font-size: 1.4rem;
-            padding-bottom: 0;
+            padding-bottom: 5px;
+            font-weight: 300;
             transition: all .3s ease-in-out;
-            &:hover{
+            opacity: 0.4;
+            &:hover:not(.active){
                 color: $primary;
-                padding-bottom: 10px;
+                padding-bottom: 5px;
+                opacity: 1;
                 border-bottom: 2px solid $primary;
             }
         }
     }
-    .active{ color: $primary; }
+    .active{ color: $primary !important; opacity: 1 !important; font-weight: bold !important;}
 </style>

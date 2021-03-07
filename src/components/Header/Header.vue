@@ -2,15 +2,18 @@
     <header class="header">
         <div class="headerContainer">
             <Tags />
+            <Auth />
         </div>
     </header>
 </template>
 <script>
 import Tags from './Tags';
+import Auth from './Auth';
 
 export default {
     components: {
         Tags,
+        Auth
     }
 }
 </script>
@@ -21,7 +24,12 @@ export default {
     }
     .headerContainer{
         width: 100%;
-        max-width: 1175px;
+        max-width: $container;
         margin: 0 auto;
+        display: flex;
+        position: fixed;
+        z-index: 500;
+        background: #222;
+        justify-content: space-between;
     }
 </style>

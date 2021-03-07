@@ -22,6 +22,7 @@ export default {
         width: $sidebarSize;
         height: 100vh;
         position: fixed;
+        z-index: 100;
     }
     .sidebarContainer{
         width: 100%;

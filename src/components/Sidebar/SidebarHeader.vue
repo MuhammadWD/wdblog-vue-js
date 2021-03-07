@@ -1,27 +1,34 @@
 <template>
     <div class="sideHeader">
         <div class="logotype">
-            <img src="../../assets/images/logo.svg" alt="">
+            <a href="" class="logoLink">
+                <h3><span>WD</span>blog</h3>
+            </a>
         </div>
     </div>
 </template>
 <style lang="scss">
-    .sideHeader{ margin-bottom: 20px; }
     .logotype{
-        padding: 15px 20px;
+        padding: 30px 20px;
         margin: 0;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 2px;
-
-        font-size: 2rem;
-        font-weight: 700;
-        color: white;
-        img{
-            width: 100%;
-            height: 100%;
-            max-width: 110px;
+        h3{
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+        }
+        span{
+            font-family: 'Comforta', cursive;
+            font-size: 2rem;
+            font-weight: 700;
+            background: $primary;
+            text-align: center;
+            border-radius: 5px;
+            padding: .4rem .7rem;
+            margin-right: .4rem;
         }
     }
 </style>

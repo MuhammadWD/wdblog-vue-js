@@ -1,16 +1,14 @@
 <template>
-  <Secondary />
   <Primary />
+  <Second />
 </template>
-
 <script>
-import Secondary from './components/fixedComponents/Second';
 import Primary from './components/fixedComponents/Primary';
+import Second from './components/fixedComponents/Second';
 
 export default {
-  name: 'App',
-  components: {
-    Primary, Secondary
+  components:{
+    Primary, Second
   }
 }
 </script>

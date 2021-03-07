@@ -1,10 +1,12 @@
 <template>
     <div class="mainWrapper">
         <Header />
+        <router-view></router-view>
     </div>
 </template>
 <script>
 import Header from '../Header/Header';
+
 
 export default {
     components: {
@@ -12,11 +14,13 @@ export default {
     }
 }
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
     .mainWrapper{
         width: 100%;
         margin-left: $sidebarSize;
         height: 100%;
-        border: 1px solid #000;
+    }
+    .pagesWrapper{
+        margin-top: 8.5rem;
     }
 </style>
